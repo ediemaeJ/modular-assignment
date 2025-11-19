@@ -1,25 +1,27 @@
+#include <MyString.h>
+
 void MyToUpper(char, int);
 void MyToLower(char, int);
 
-void MyToUpper(char *str, int StrLen){
-int StrPos; 
-  for(StrPos=0; StrPos<=StrLen; StrPos++){
-    if(*str <=122 && *str >=97){
-    *str - 32; 
+void MyToUpper(char *str, int StrLen) {
+  int StrPos;
+  for (StrPos = ZEROSTART; StrPos <= StrLen; StrPos++) {
+    if (*str <= UPCASE_ULIMIT && *str >= UPCASE_LLIMIT) {
+      *str - CASE_CONV_VAL;
     }
     str++;
   }
-  return; 
+  return;
 }
 
-void MyToLower(char *str, int StrLen){
+void MyToLower(char *str, int StrLen) {
   int StrPos;
-  for(StrPos=0; StrPos<=StrLen; StrPos++){
-  if(*str <=90 && *str >= 65){
-  *str+32;
-  }
+  for (StrPos = ZEROSTART; StrPos <= StrLen; StrPos++) {
+    if (*str <= LCASE_ULIMIT && *str >= LCASE_LLIMIT) {
+      *str + CASE_CONV_VAL;
+    }
     str++;
   }
-  return; 
+  return;
 }
 
