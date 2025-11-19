@@ -1,0 +1,6 @@
+#define CASE_CONV_VAL 32 
+#define LCASE_LLIMIT 97
+#define LCASE_ULIMIT 122
+#define UPCASE_LLIMIT 65
+#define UPCASE_ULIMIT 90
+#define ZEROSTART 0 
